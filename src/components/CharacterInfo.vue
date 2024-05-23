@@ -22,6 +22,20 @@
                 <div>Location: {{ character.location?.name }}</div>
                 <div>Episodes: {{ episodeNumbers }}</div>
             </v-card-text>
+
+            <v-card-actions>
+                <v-spacer></v-spacer>
+
+                <v-btn
+                    rounded="xl" 
+                    size="x-large" 
+                    prepend-icon="mdi-arrow-left" 
+                    color="primary" 
+                    @click="$router.push('/')"
+                >
+                    Back
+                </v-btn>
+            </v-card-actions>
         </v-card>
     </div>
 </template>
