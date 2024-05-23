@@ -17,16 +17,24 @@
 
         <v-card-title class="text-wrap">
             {{ character.name }}
-            <!-- <v-icon icon="mdi-information-outline" size="x-large" style="cursor: pointer;" @click="dialog = true"></v-icon>  -->
+            <v-icon icon="mdi-information-outline" size="x-large" style="cursor: pointer;" @click="navigateToRoute(`/character/${character.id}`)"></v-icon> 
         </v-card-title>
     </v-card>
 </template>
 
 <script setup>
+    import { useRouter } from 'vue-router';
+
     const props = defineProps({
         character: {
             type: Object,
             required: true,
         },
     });
+
+    const router = useRouter();
+
+    const navigateToRoute = (path) => {
+        router.push(path);
+    };
 </script>
