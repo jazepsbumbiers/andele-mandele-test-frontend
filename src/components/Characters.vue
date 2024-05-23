@@ -1,5 +1,5 @@
 <template>
-    <v-container>
+    <v-container class="mt-3">
         <v-row
             v-if="characters.length"
             align="center"
