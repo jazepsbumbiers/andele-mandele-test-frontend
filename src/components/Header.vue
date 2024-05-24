@@ -1,6 +1,6 @@
 <template>
     <v-app-bar :elevation="2">
-        <v-app-bar-title>AndeleMandele test task - {{ pageTitle }}</v-app-bar-title>
+        <v-app-bar-title>Rick and Morty - {{ pageTitle }}</v-app-bar-title>
     </v-app-bar>
 </template>
 
@@ -13,7 +13,9 @@
     const pageTitle = computed(() => {
         switch (route.name) {
             case 'home':
-                return `Home`;
+                return 'Home';
+            case 'character':
+                return 'Character Info';
         }
     });
 </script>

@@ -25,6 +25,7 @@
 
     onMounted(() => {
         observer = new IntersectionObserver(handleIntersect, props.options);
+        
         if (observerRef.value) {
             observer.observe(observerRef.value);
         }
